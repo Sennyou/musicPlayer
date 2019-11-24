@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:orientation="vertical">
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="歌曲："/>
+       <androidx.recyclerview.widget.RecyclerView
+           android:id="@+id/rec_list"
+           android:layout_width="match_parent"
+           android:layout_height="0dp"
+           android:layout_weight="6"></androidx.recyclerview.widget.RecyclerView>
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="0dp"
+           android:layout_weight="1"
+           android:layout_marginBottom="15dp">
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_above="@id/listen_play"
+               android:layout_marginBottom="10dp"
+               android:orientation="horizontal"
+               android:paddingLeft="10dp"
+               android:paddingRight="10dp">
+               //设置“当前歌曲时间”
+               <TextView
+                   android:id="@+id/listen_current_tv"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="00:00" />
+               //设置“进度条”
+               <SeekBar
+                   android:id="@+id/listen_jindutiao_sb"
+                   android:layout_width="0dp"
+                   android:layout_height="match_parent"
+                   android:layout_weight="1" />
+               //设置“歌曲总时长”
+               <TextView
+                   android:id="@+id/listen_length_tv"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="02:30" />
+
+           </LinearLayout>
+       <RelativeLayout
+           android:id="@+id/listen_play"
+           android:layout_width="match_parent"
+           android:layout_height="60dp"
+           android:layout_alignParentBottom="true"
+           android:layout_marginBottom="0dp">
+
+           //设置“暂停”
+           <ImageView
+               android:id="@+id/toplay"
+               android:layout_width="60dp"
+               android:layout_height="60dp"
+               android:layout_centerHorizontal="true"
+               android:layout_centerVertical="true"
+               android:layout_marginTop="10dp"
+               android:src="@drawable/toplay" />
+           //设置“上一首”
+           <ImageView
+               android:id="@+id/up"
+               android:layout_width="40dp"
+               android:layout_height="40dp"
+               android:layout_centerVertical="true"
+               android:layout_marginLeft="30dp"
+               android:layout_marginRight="30dp"
+               android:layout_toLeftOf="@id/toplay"
+               android:src="@drawable/up" />
+
+           //设置下一首
+           <ImageView
+               android:id="@+id/listen_next_img"
+               android:layout_width="40dp"
+               android:layout_height="40dp"
+               android:layout_centerVertical="true"
+               android:layout_marginLeft="30dp"
+               android:layout_toRightOf="@id/toplay"
+               android:src="@drawable/next" />
+
+       </RelativeLayout>
+
+       </RelativeLayout>
+
+   </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
