@@ -1,12 +1,12 @@
 package com.example.musicplayer;
 
 public class music {
-    long id;
-    String title;
-    String artist;
-    long duration;
-    long size;
-    String url;
+    private long id;
+    private String title;
+    private String artist;
+    private long duration;
+    private long size;
+    private String url;
 
     public void setId(long id) {
         this.id = id;

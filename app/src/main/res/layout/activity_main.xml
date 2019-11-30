@@ -11,6 +11,7 @@
        android:layout_height="match_parent"
        android:orientation="vertical">
        <TextView
+           android:id="@+id/mingzi"
            android:layout_width="match_parent"
            android:layout_height="wrap_content"
            android:text="歌曲："/>
@@ -56,15 +57,15 @@
        <RelativeLayout
            android:id="@+id/listen_play"
            android:layout_width="match_parent"
-           android:layout_height="60dp"
+           android:layout_height="40dp"
            android:layout_alignParentBottom="true"
            android:layout_marginBottom="0dp">
 
            //设置“暂停”
            <ImageView
                android:id="@+id/toplay"
-               android:layout_width="60dp"
-               android:layout_height="60dp"
+               android:layout_width="40dp"
+               android:layout_height="40dp"
                android:layout_centerHorizontal="true"
                android:layout_centerVertical="true"
                android:layout_marginTop="10dp"
@@ -72,8 +73,8 @@
            //设置“上一首”
            <ImageView
                android:id="@+id/up"
-               android:layout_width="40dp"
-               android:layout_height="40dp"
+               android:layout_width="30dp"
+               android:layout_height="30dp"
                android:layout_centerVertical="true"
                android:layout_marginLeft="30dp"
                android:layout_marginRight="30dp"
@@ -82,14 +83,31 @@
 
            //设置下一首
            <ImageView
-               android:id="@+id/listen_next_img"
-               android:layout_width="40dp"
-               android:layout_height="40dp"
+               android:id="@+id/next"
+               android:layout_width="30dp"
+               android:layout_height="30dp"
                android:layout_centerVertical="true"
                android:layout_marginLeft="30dp"
                android:layout_toRightOf="@id/toplay"
                android:src="@drawable/next" />
 
+           <ImageView
+               android:id="@+id/xun"
+               android:layout_width="30dp"
+               android:layout_height="30dp"
+               android:layout_alignParentRight="true"
+               android:layout_marginTop="7dp"
+               android:layout_marginRight="30dp"
+               android:src="@drawable/xun_danqu" />
+
+           <ImageView
+               android:id="@+id/c"
+               android:layout_width="30dp"
+               android:layout_height="30dp"
+               android:layout_alignParentLeft="false"
+               android:layout_marginLeft="30dp"
+               android:layout_marginTop="8dp"
+               android:src="@drawable/c" />
        </RelativeLayout>
 
        </RelativeLayout>
